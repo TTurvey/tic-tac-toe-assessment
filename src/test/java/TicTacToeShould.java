@@ -1,10 +1,10 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 public class TicTacToeShould {
-
 
     @Test
     void
@@ -21,6 +21,16 @@ public class TicTacToeShould {
 
         assertTrue( ticTacToe.play("X") );
     }
+
+    @Test
+    void
+    allow_X_and_then_O() {
+        TicTacToe ticTacToe = new TicTacToe();
+        ticTacToe.play("X");
+
+        assertTrue( ticTacToe.play("O") );
+    }
+
 
 
 
