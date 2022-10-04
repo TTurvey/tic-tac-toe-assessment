@@ -9,7 +9,7 @@ public class TicTacToe {
             return true;
         }
 
-        if (symbol.equals("O") && turnNumber > 1) {
+        if (symbol.equals("O") && turnNumber % 2 == 0) {
             turnNumber++;
             return true;
         }
