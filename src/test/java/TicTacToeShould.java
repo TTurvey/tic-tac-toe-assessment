@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 public class TicTacToeShould {
 
     @Test
@@ -43,12 +42,21 @@ public class TicTacToeShould {
 
     @Test
     void
-    prevent_X_and_then_O_and_then_O() {
+    allow_X_and_then_O_and_then_prevent_O() {
         TicTacToe ticTacToe = new TicTacToe();
         ticTacToe.play("X");
         ticTacToe.play("O");
 
         assertFalse( ticTacToe.play("O") );
+    }
+
+    @Test
+    void
+    allow_X_and_then_prevent_X() {
+        TicTacToe ticTacToe = new TicTacToe();
+        ticTacToe.play("X");
+
+        assertFalse( ticTacToe.play("X") );
     }
 
 

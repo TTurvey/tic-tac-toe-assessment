@@ -4,7 +4,7 @@ public class TicTacToe {
 
     public boolean play(String symbol) {
 
-        if (symbol.equals("X")) {
+        if (symbol.equals("X") && turnNumber % 2 == 1 ) {
             turnNumber++;
             return true;
         }
