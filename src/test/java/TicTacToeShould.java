@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class TicTacToeShould {
 
@@ -11,6 +12,14 @@ public class TicTacToeShould {
         TicTacToe ticTacToe = new TicTacToe();
 
         assertFalse( ticTacToe.play("O") );
+    }
+
+    @Test
+    void
+    allow_X_to_play_first() {
+        TicTacToe ticTacToe = new TicTacToe();
+
+        assertTrue( ticTacToe.play("X") );
     }
 
 
