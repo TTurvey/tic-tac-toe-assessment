@@ -31,6 +31,26 @@ public class TicTacToeShould {
         assertTrue( ticTacToe.play("O") );
     }
 
+    @Test
+    void
+    allow_X_and_then_O_and_then_X() {
+        TicTacToe ticTacToe = new TicTacToe();
+        ticTacToe.play("X");
+        ticTacToe.play("O");
+
+        assertTrue( ticTacToe.play("X") );
+    }
+
+//    @Test
+//    void
+//    allow_X_and_then_O_and_then_X() {
+//        TicTacToe ticTacToe = new TicTacToe();
+//        ticTacToe.play("X");
+//        ticTacToe.play("O");
+//
+//        assertFalse( ticTacToe.play("O") );
+//    }
+
 
 
 
